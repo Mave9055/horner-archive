@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Killing of John Spencer Horner — Johnson County Civil War Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1208;--deep:#2c1f0e;--rust:#7a3b1e;--rl:#a04e2a;--gold:#b8892a;--gl:#d4a84b;--cream:#f5efe0;--parch:#ede4cc;--pale:#f9f5ec;--muted:#6b5c42;--rule:#c4a96a;--sh:rgba(26,18,8,0.15);--grn:#4a7c4e;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--parch);color:var(--ink);font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.75;}
+
+/* MASTHEAD */
+.mh{background:var(--deep);color:var(--cream);text-align:center;padding:3.5rem 2rem 2.8rem;border-bottom:4px solid var(--gold);position:relative;overflow:hidden;}
+.mh::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(184,137,42,.05) 28px,rgba(184,137,42,.05) 29px);pointer-events:none;}
+.eyebrow{font-family:'Courier Prime',monospace;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,5vw,3.5rem);font-weight:900;line-height:1.1;color:var(--cream);}
+h1 em{font-style:italic;color:var(--gl);}
+.mhr{width:60px;height:2px;background:var(--gold);margin:1.2rem auto;}
+.place{font-family:'EB Garamond',serif;font-style:italic;font-size:1.1rem;color:#c9b88a;margin-bottom:1.6rem;}
+.mmeta{font-family:'Courier Prime',monospace;font-size:.68rem;letter-spacing:.1em;color:#8a7a60;display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem 2rem;}
+
+/* NAV */
+nav{background:var(--ink);border-bottom:2px solid var(--rust);position:sticky;top:0;z-index:100;}
+nav ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;max-width:960px;margin:0 auto;}
+nav a{display:block;padding:.7rem 1rem;font-family:'Courier Prime',monospace;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:#8a7a60;text-decoration:none;transition:color .2s,background .2s;}
+nav a:hover{color:var(--gl);background:rgba(184,137,42,.08);}
+
+/* LAYOUT */
+.page{max-width:820px;margin:0 auto;padding:3.5rem 1.5rem 6rem;}
+section{margin-bottom:5rem;opacity:0;transform:translateY(16px);animation:rise .65s ease forwards;}
+section:nth-child(1){animation-delay:.05s}section:nth-child(2){animation-delay:.12s}
+section:nth-child(3){animation-delay:.18s}section:nth-child(4){animation-delay:.24s}
+section:nth-child(5){animation-delay:.30s}section:nth-child(6){animation-delay:.36s}
+section:nth-child(7){animation-delay:.42s}section:nth-child(8){animation-delay:.48s}
+section:nth-child(9){animation-delay:.54s}section:nth-child(10){animation-delay:.60s}
+section:nth-child(11){animation-delay:.66s}section:nth-child(12){animation-delay:.72s}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+/* HEADINGS */
+.sl{font-family:'Courier Prime',monospace;font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--rl);margin-bottom:.4rem;}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,1.95rem);font-weight:700;color:var(--deep);line-height:1.2;margin-bottom:.3rem;}
+.rule{width:100%;height:1px;background:linear-gradient(90deg,var(--rust) 0%,var(--rule) 50%,transparent 100%);margin-bottom:1.8rem;margin-top:.4rem;}
+
+/* PROSE */
+p{margin-bottom:1.1rem;font-size:1.02rem;}p:last-child{margin-bottom:0;}
+.dc::first-letter{float:left;font-family:'Playfair Display',serif;font-size:4.4rem;font-weight:900;line-height:.76;margin-right:.08em;margin-top:.1em;color:var(--rust);}
+
+/* BLOCKQUOTE */
+blockquote{border-left:3px solid var(--rust);padding:1rem 1.5rem;margin:2rem 0;background:rgba(122,59,30,.04);}
+blockquote p{font-style:italic;margin-bottom:.5rem;}
+blockquote cite{font-family:'Courier Prime',monospace;font-style:normal;font-size:.7rem;letter-spacing:.1em;color:var(--muted);display:block;}
+
+/* TABLES */
+.tw{overflow-x:auto;margin:1.8rem 0;}
+table{width:100%;border-collapse:collapse;font-size:.92rem;}
+thead th{background:var(--deep);color:var(--cream);padding:.6rem .9rem;text-align:left;font-family:'Courier Prime',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;}
+tbody td{padding:.55rem .9rem;border-bottom:1px solid rgba(196,169,106,.35);vertical-align:top;}
+tbody tr:nth-child(even) td{background:rgba(245,239,224,.6);}
+.mono{font-family:'Courier Prime',monospace;font-size:.82rem;}
+.tm{color:var(--rust);font-weight:700;}.td{color:var(--muted);}
+
+/* MAP */
+.mf{width:100%;aspect-ratio:16/9;background:var(--pale);border:1px solid var(--rule);position:relative;overflow:hidden;margin-bottom:.6rem;}
+.mf iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.mph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;font-family:'Courier Prime',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--muted);text-align:center;padding:1rem;}
+.mc{font-family:'Courier Prime',monospace;font-size:.67rem;letter-spacing:.1em;color:var(--muted);text-align:center;}
+
+/* CARDS */
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;}
+.pc{background:var(--pale);border:1px solid var(--rule);border-top:3px solid var(--rust);padding:1.1rem 1.2rem;}
+.pr{font-family:'Courier Prime',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rl);margin-bottom:.3rem;}
+.pn{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--deep);line-height:1.2;margin-bottom:.25rem;}
+.pd{font-family:'Courier Prime',monospace;font-size:.67rem;color:var(--muted);margin-bottom:.5rem;}
+.pnt{font-size:.85rem;color:var(--muted);line-height:1.5;font-style:italic;}
+
+.ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem;margin:1.8rem 0;}
+.ac{background:var(--pale);border:1px solid var(--rule);border-left:4px solid var(--gold);padding:1rem 1.1rem;}
+.an{font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;color:var(--deep);margin-bottom:.3rem;}
+.at{font-size:.83rem;color:var(--muted);line-height:1.5;font-style:italic;}
+
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:1rem;}
+.sc{background:var(--pale);border:1px solid var(--rule);border-top:3px solid var(--rust);padding:1.1rem;transition:box-shadow .2s,transform .2s;}
+.sc:hover{box-shadow:0 4px 18px var(--sh);transform:translateY(-2px);}
+.stp{font-family:'Courier Prime',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rl);margin-bottom:.35rem;}
+.st{font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;color:var(--deep);line-height:1.3;margin-bottom:.35rem;}
+.sd{font-size:.84rem;color:var(--muted);line-height:1.55;margin-bottom:.5rem;}
+.si{font-family:'Courier Prime',monospace;font-size:.65rem;}
+.ok{color:var(--grn);}.pnd{color:var(--rl);}
+
+/* HIGHLIGHT */
+.hl{background:rgba(122,59,30,.05);border:1px solid rgba(196,169,106,.5);border-left:4px solid var(--rust);padding:1.2rem 1.5rem;margin:2rem 0;font-size:.95rem;color:var(--deep);line-height:1.7;}
+.hl strong{color:var(--rust);}
+
+/* NOTICE */
+.notice{background:rgba(122,59,30,.05);border:1px dashed rgba(122,59,30,.4);padding:.8rem 1.2rem;font-family:'Courier Prime',monospace;font-size:.72rem;letter-spacing:.05em;color:var(--rust);margin-bottom:1.4rem;line-height:1.6;}
+
+/* GALLERY */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem;margin:1.5rem 0;}
+.gi{background:var(--pale);border:1px solid var(--rule);padding:.6rem;}
+.gph{width:100%;height:155px;background:linear-gradient(135deg,#c4b49a,#a89070);display:flex;align-items:center;justify-content:center;font-family:'Courier Prime',monospace;font-size:.63rem;letter-spacing:.08em;color:rgba(26,18,8,.4);text-align:center;padding:1rem;}
+.gc{font-family:'Courier Prime',monospace;font-size:.63rem;letter-spacing:.07em;color:var(--muted);text-align:center;margin-top:.4rem;line-height:1.4;font-style:italic;}
+
+/* DOWNLOAD */
+.dlb{background:var(--deep);color:var(--cream);padding:2.5rem 2rem;text-align:center;position:relative;overflow:hidden;margin:2rem 0;}
+.dlb::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 22px,rgba(184,137,42,.04) 22px,rgba(184,137,42,.04) 23px);}
+.dlb h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--gl);margin-bottom:.5rem;position:relative;}
+.dlb p{font-size:.9rem;color:#c9b88a;margin-bottom:1.4rem;position:relative;}
+.btn{display:inline-block;padding:.75rem 1.8rem;font-family:'Courier Prime',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:all .2s;cursor:pointer;position:relative;}
+.bp{background:var(--gold);color:var(--ink);border:2px solid var(--gold);}
+.bp:hover{background:var(--gl);border-color:var(--gl);transform:translateY(-1px);box-shadow:0 4px 16px rgba(184,137,42,.35);}
+.bg{background:transparent;color:var(--cream);border:2px solid rgba(201,184,138,.35);margin-left:1rem;}
+.bg:hover{border-color:var(--gold);color:var(--gl);}
+
+/* FOOTER */
+footer{background:var(--ink);color:#5e5040;text-align:center;padding:2.5rem 1.5rem;font-family:'Courier Prime',monospace;font-size:.67rem;letter-spacing:.1em;line-height:2;}
+.ft{color:var(--cream);font-family:'Playfair Display',serif;font-style:italic;font-size:.9rem;letter-spacing:0;margin-bottom:.4rem;}
+footer a{color:var(--gold);text-decoration:none;}
+
+@media(max-width:600px){.page{padding:2rem 1rem 4rem;}nav a{padding:.55rem .7rem;font-size:.62rem;}.bg{margin-left:0;margin-top:.7rem;display:block;}blockquote{padding:.8rem 1rem;}}
+</style>
+</head>
+<body>
+
+<header class="mh">
+  <p class="eyebrow">Johnson County Civil War Archive &nbsp;&middot;&nbsp; Floyd Township, Arkansas</p>
+  <h1>The Killing of<br><em>John Spencer Horner</em></h1>
+  <div class="mhr"></div>
+  <p class="place">Floyd Township, Johnson County, Arkansas &mdash; August 2, 1864</p>
+  <div class="mmeta">
+    <span>Research: Daniel Lingar</span><span>Dossier v.&thinsp;10.0</span>
+    <span>March 2026</span><span>Clarksville, AR</span>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#attack">The Attack</a></li>
+    <li><a href="#orphans">The Children</a></li>
+    <li><a href="#deaths">Six Deaths</a></li>
+    <li><a href="#map">Map</a></li>
+    <li><a href="#people">People</a></li>
+    <li><a href="#sheriff">The Sheriff</a></li>
+    <li><a href="#reckoning">Reckoning</a></li>
+    <li><a href="#suspect">Suspect</a></li>
+    <li><a href="#yale">Yale Cemetery</a></li>
+    <li><a href="#sources">Sources</a></li>
+    <li><a href="#dossier">Full Dossier</a></li>
+  </ul>
+</nav>
+
+<main class="page">
+
+<section id="attack">
+  <p class="sl">&sect;&nbsp;01</p>
+  <h2>The Attack</h2>
+  <div class="rule"></div>
+  <p class="dc">On the morning of August second, one of Spencer's sons &mdash; the one they called Louis &mdash; took his horse up the mountain to get it shod, five miles from the house. Before he left, he told his father and his brother William: <em>whatever you do, don't go up to the house in the daytime. Stay back in the timber. Keep watch.</em></p>
+  <p>But the women were killing a chicken for dinner, and the house was where the food was. So Spencer and William went up anyway.</p>
+  <p>The children had been posted as lookouts &mdash; a common precaution in those years, when bushwhackers moved through the hills like weather. When the boys saw men coming off the mountain, they ran inside hollering: <em>"Here they come, Grandpap!"</em></p>
+  <p>Spencer walked out into the potato patch to meet them. There were about twenty riders, and he recognized them. They were neighbors, men he'd known for years. He raised his hands. <em>"I surrender,"</em> he said. They shot him where he stood.</p>
+  <p>William ran. He tore through the lot and up the mountainside, but they caught him in the potato field. They beat him with pistols. They crushed his genitals. Then they left him on the ground, bleeding and broken, assuming he'd die where he lay. He didn't die. Not right away.</p>
+  <p>The women found him still breathing. They didn't dare carry him back to the house &mdash; the bushwhackers might return to finish the job. So they dragged him into the woods, up the mountain to a cave, a rock overhang where he could be hidden. Every day they came back. They wrapped the food in bundles shaped like a baby, so anyone watching would see women carrying an infant, not supplies to a hidden man. They kept this up for eight days. William Riley Horner died on August tenth. He was thirty years old.</p>
+  <blockquote>
+    <p>"Wm. R. Homer Born Aug. 1, 1834 Killed Aug. 10, 1864 by parties known to his family."</p>
+    <cite>&mdash; Tombstone inscription, Moore Cemetery, Johnson County, Arkansas</cite>
+  </blockquote>
+  <p>The misspelling is cut into the stone just as they wrote it. <em>"By parties known to his family."</em> A public accusation in stone, because the law would do nothing.</p>
+</section>
+
+<section id="orphans">
+  <p class="sl">&sect;&nbsp;02</p>
+  <h2>The Children Who Watched</h2>
+  <div class="rule"></div>
+  <p>In the house that day were Spencer's orphaned grandsons: <strong>John Samuel Acord</strong>, age 7, and <strong>Christopher Columbus Acord</strong>, age 3. Their mother Elizabeth Horner Acord had died March 1, 1864, of pneumonia &mdash; she'd spent her days chopping wood in the cold rain to keep the fire going while her husband was away, and it killed her at twenty-eight. Their father Francis made it home to learn his wife was dead, then went back to his unit and died at Lewisburg Ridge on April twenty-eighth from measles or typhoid. The records don't say which.</p>
+  <p>Spencer had retrieved the boys after Francis died. They had been at the farm approximately three months when the riders came.</p>
+  <div class="hl"><strong>Connection to the researcher:</strong> John Samuel Acord is the 2nd great-grandfather of Daniel Lingar, who compiled this archive. This record exists because a seven-year-old boy survived what happened in that potato patch and lived to old age in the same county where it happened.</div>
+  <p>Spencer Horner was a tall man of fifty-six &mdash; Irish and Cherokee by blood, a Union man in a county full of rebels. He had two hundred acres at least, some of it acquired through a Native American estate transfer. He had gold and silver hidden somewhere on the property. He had children scattered across Arkansas and Missouri, and he had these two boys, the youngest of the lot.</p>
+</section>
+
+<section id="deaths">
+  <p class="sl">&sect;&nbsp;03</p>
+  <h2>The Six Deaths of 1864</h2>
+  <div class="rule"></div>
+  <p>That summer killed the Horners in ways that had nothing to do with battlefields.</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Date</th><th>Individual</th><th>Cause</th><th>Location</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">March 1, 1864</td><td>Elizabeth Horner Acord, age 28</td><td class="td">Pneumonia &mdash; chopping wood in cold rain</td><td>Floyd Township</td></tr>
+        <tr><td class="mono">April 28, 1864</td><td>Francis Marion Acord</td><td class="td">Disease &mdash; measles or typhoid</td><td>Lewisburg Ridge</td></tr>
+        <tr><td class="mono">July 31, 1864</td><td>Andrew Jackson Horner</td><td class="td">Measles</td><td>Lewisburg Ridge</td></tr>
+        <tr><td class="mono">August 2, 1864</td><td>John Spencer Horner, age 56</td><td class="tm">Murdered &mdash; shot in the potato patch</td><td>Floyd Township homestead</td></tr>
+        <tr><td class="mono">August 4&ndash;12, 1864</td><td>Pleasant Horner</td><td class="td">Disease (date disputed)</td><td>Lewisburg Ridge area</td></tr>
+        <tr><td class="mono">August 10, 1864</td><td>William Riley Horner, age 30</td><td class="tm">Died of wounds &mdash; cave on mountainside</td><td>Floyd Township</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="hl"><strong>Six deaths in 163 days.</strong> None of them in combat. Three to disease in a single camp. Two to bushwhackers. One to a beating that took eight days to finish. The two boys who watched it happen were seven and three.</div>
+</section>
+
+<section id="map">
+  <p class="sl">&sect;&nbsp;04</p>
+  <h2>Site Locations</h2>
+  <div class="rule"></div>
+  <p>GPS coordinates recorded by Jimmie Dewberry, 2003. Preserved in FamilySearch record LH23-VP3. All sites are north of Highway 86 (Low Gap Road), approximately 2.3 miles west of Ozone, Arkansas.</p>
+  <div class="mf">
+    <!--
+      TO EMBED YOUR MAP:
+      1. Go to mymaps.google.com and open your map
+      2. Click Share, then "Embed on my site"
+      3. Copy the iframe code and paste it here, replacing this comment and the div.mph below
+    -->
+    <div class="mph">
+      <span style="font-size:2rem;opacity:.25;">&#x2295;</span>
+      <span>INTERACTIVE MAP<br>Moore Cemetery &nbsp;&middot;&nbsp; Horner Homestead &nbsp;&middot;&nbsp; Cave Refuge<br><br>Paste your Google My Maps embed iframe here</span>
+    </div>
+  </div>
+  <p class="mc">Floyd Township, Johnson County, Arkansas &mdash; GPS-verified sites &mdash; Jimmie Dewberry (2003) &mdash; FamilySearch LH23-VP3</p>
+  <div class="tw" style="margin-top:1.8rem;">
+    <table>
+      <thead><tr><th>Location</th><th>GPS Coordinates</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Moore Cemetery</td><td class="mono">Lat. 35&deg;, Long. 093&deg;W, 29.73 min.</td><td>Spencer, William, Permelia Horner buried here</td></tr>
+        <tr><td>Spencer Horner House Site</td><td class="mono">Lat. 35&deg;, 40.09 min.; Long. 093&deg;W, 29.89 min.</td><td>Attack site; potato patch; Spencer's murder</td></tr>
+        <tr><td>The Bluff / Cave</td><td class="mono">Lat. 35&deg;, 39.5 min.; Long. 093&deg;W, 29.33 min.</td><td>William's hiding place; died here Aug. 10, 1864</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:.9rem;color:var(--muted);margin-top:1rem;"><strong>Directions:</strong> From Ozone, AR, take Highway 86 (Low Gap Road) west approximately 2.3 miles. Turn north toward Farris Springs. A locked cable blocks access approximately one mile from the cemetery.</p>
+</section>
+
+<section id="people">
+  <p class="sl">&sect;&nbsp;05</p>
+  <h2>The Principal People</h2>
+  <div class="rule"></div>
+  <div class="pg">
+    <div class="pc"><div class="pr">Victim &middot; Patriarch</div><div class="pn">John Spencer Horner</div><div class="pd">b. ~1808 &nbsp;&middot;&nbsp; d. August 2, 1864</div><div class="pnt">Irish and Cherokee by blood. Union-aligned. Shot in the potato patch after raising his hands and surrendering. Recognized his killers as neighbors.</div></div>
+    <div class="pc"><div class="pr">Victim</div><div class="pn">William Riley Horner</div><div class="pd">b. August 1, 1834 &nbsp;&middot;&nbsp; d. August 10, 1864</div><div class="pnt">Son of Spencer. Beaten with pistols, genitals crushed. Hidden in a cave. Died eight days after the attack. Age 30.</div></div>
+    <div class="pc"><div class="pr">Witness &middot; Age 7</div><div class="pn">John Samuel Acord</div><div class="pd">b. ~1857 &nbsp;&middot;&nbsp; d. 1928</div><div class="pnt">Orphaned grandson in the house on August 2. Watched his grandfather shot. Later married Amanda Catherine Hill &mdash; niece of the sheriff who never investigated. 2nd great-grandfather of this archive's compiler.</div></div>
+    <div class="pc"><div class="pr">Witness &middot; Age 3</div><div class="pn">Christopher Columbus Acord</div><div class="pd">b. ~1861</div><div class="pnt">Younger brother of John Samuel. Also in the house. Both boys orphaned before the attack: mother died March 1, father April 28, 1864.</div></div>
+    <div class="pc"><div class="pr">Survivor</div><div class="pn">Permelia Turner Horner</div><div class="pd">d. August 9, 1892</div><div class="pnt">Spencer's wife. Present during the attack. Sold the farm for a horse and wagon. Returned to Johnson County after the war. Died one day before the 28th anniversary of William's death in the cave.</div></div>
+    <div class="pc"><div class="pr">Sheriff / CSA Colonel</div><div class="pn">John Fry Hill</div><div class="pd">b. Aug 9, 1822 &middot; d. Feb 3, 1882 &middot; Sheriff 1858&ndash;1864 &middot; Col., 7th Ark. Cavalry (CSA)</div><div class="pnt">Mexican-American War veteran (1st Lt., 1846&ndash;48). Settled Clarksville 1850 as merchant and tailor. Commanded 16th Arkansas Infantry at Pea Ridge (1862), then organized 7th Arkansas Cavalry (1863). Active in Johnson County corridor on the day of the murders &mdash; Confederate activity recorded at Dardanelle, August 3, 1864. Wounded at Pilot Knob and Westport, both after the murders. Grand Master, Grand Lodge of Arkansas (Freemasons), 1873. Re-elected sheriff 1878. Arkansas Senate 1880. <strong>Buried: Oakland Memorial Cemetery, Spadra Township &mdash; not Yale Cemetery.</strong></div></div>
+    <div class="pc"><div class="pr">Union Soldier &middot; Brother of the Sheriff</div><div class="pn">Joseph Hill</div><div class="pd">b. January 9, 1823 &nbsp;&middot;&nbsp; d. September 1864</div><div class="pnt">John Fry Hill's brother. Fought for the Union &mdash; 2nd Arkansas Cavalry (US). Died September 1864, one month after Spencer Horner was murdered. His daughter Amanda Catherine Hill later married John Samuel Acord, the seven-year-old witness. The two Hill brothers fought on opposite sides of the same war, in the same county, the same summer.</div></div>
+    <div class="pc"><div class="pr">Hill Family Patriarch</div><div class="pn">Marcus Mark Hill</div><div class="pd">b. ~1790 &nbsp;&middot;&nbsp; d. 1878</div><div class="pnt">War of 1812 veteran. Fought at the Battle of New Orleans and Horseshoe Bend. Settled Mulberry Township, Johnson County between 1836&ndash;1840. His wife was Rachel Fry Hill &mdash; the name "Fry" passed to his son John Fry Hill. Buried at Yale Cemetery, Oark &mdash; the same ground as Henry Stewart (named suspect) and John "Old Jack" Acord (grandfather of the witnesses).</div></div>
+    <div class="pc"><div class="pr">Hill Family Matriarch</div><div class="pn">Rachel Fry Hill</div><div class="pd">b. 1795, Perry, TN &nbsp;&middot;&nbsp; d. 1843, Yale, Johnson Co., AR</div><div class="pnt">Wife of Marcus Mark Hill. Father: Johannus Rowan "John" Fry. The surname "Fry" — carried forward as John Fry Hill's middle name — came from her family. She died in Yale, Johnson County in 1843, twenty-one years before the murders, and is buried in the same community where the suspect and the orphans' grandfather rest.</div></div>
+  </div>
+</section>
+
+<section id="sheriff">
+  <p class="sl">&sect;&nbsp;06</p>
+  <h2>The Sheriff Who Did Not Investigate</h2>
+  <div class="rule"></div>
+  <p>John Fry Hill was sheriff of Johnson County in August 1864. He had held the office since 1858, and he would hold it until the end of the war. He was also, at that very moment, a colonel in the Confederate army, commanding the 7th Arkansas Cavalry &mdash; a regiment raised and operating in the same county where Spencer Horner was murdered.</p>
+  <p>The 7th Arkansas Cavalry was organized July 25, 1863, built around Hill's own cavalry battalion. Of its twelve companies, four were drawn entirely from Johnson County (Companies B, H, K, L, M). These were Hill's neighbors &mdash; the same men who knew every road, every hollow, and every Unionist family in Floyd Township. The regiment fought at Poison Spring and Marks' Mills in spring 1864. Price's Missouri Raid didn't begin until September 1864. In August 1864 &mdash; the month Spencer Horner was murdered &mdash; Hill's regiment was in the region.</p>
+  <p>The men who killed Spencer Horner were Confederate-aligned irregulars, neighbors and bushwhackers fighting for the same cause John Fry Hill commanded troops to support. The sheriff was not going to investigate his own side. There is no record that he ever tried.</p>
+  <div class="hl"><strong>The bloodline connection:</strong> John Fry Hill's brother Joseph had a daughter named Amanda Catherine Hill. Years later, she would marry John Samuel Acord &mdash; the seven-year-old boy who watched his grandfather get shot in the potato patch. The sheriff who did nothing was the great-uncle of the child who needed justice. The same bloodline, divided by war and duty and the choices men made.</div>
+  <p>John Fry Hill survived the war, came home, served as sheriff again in 1878, and spent his last years as a state senator. The United Confederate Veterans named a camp after him. The <em>Goodspeed Barry County, Missouri History</em> (1888) carries a biographical entry as though none of this complicated anything.</p>
+</section>
+
+<section id="reckoning">
+  <p class="sl">&sect;&nbsp;07</p>
+  <h2>The Reckoning</h2>
+  <div class="rule"></div>
+  <p>Dr. John Turner Horner was Spencer's son, a thirty-four-year-old physician who had served in the Union army and survived the war. He had watched his family die &mdash; his father murdered, his brother beaten to death, his sister dead before the attack, her orphans now his responsibility. He led a squad of men back into the hills.</p>
+  <p>The names survive in family memory: <strong>Wash Middleton</strong>, <strong>Fate Arnold</strong>, <strong>Jess Wilson</strong>. Desperate men, the family called them. Men willing to do what the law would not.</p>
+  <blockquote>
+    <p>"One night they surrounded a house where the bushwhackers were having a dance. Wash Middleton took the man who killed grandfather by the hair and dragged him out, 'Now you'll kill a helpless old man' and killed him."</p>
+    <cite>&mdash; 1942 Horner family oral history transcript</cite>
+  </blockquote>
+  <p>They killed seventeen of the twenty bushwhackers. A cornfield ambush where each man picked his target. A dance house surrounded at night. Dr. Horner threw his pistol at the leader when it wouldn't fire. A man was shot down between his wife and mother.</p>
+  <div class="ag">
+    <div class="ac"><div class="an">Dr. John Turner Horner</div><div class="at">Spencer's son. Union army physician. Led the reprisal. Took in the Acord orphans afterward and filed for their father's pension.</div></div>
+    <div class="ac"><div class="an">Wash Middleton</div><div class="at">Killed the man who murdered Spencer &mdash; grabbed him by the hair at the dance, named what he had done, then killed him.</div></div>
+    <div class="ac"><div class="an">Fate Arnold</div><div class="at">Ran ammunition through twenty miles of rebel lines. Shot and wounded. Recovered at Dr. Horner's house in Missouri, blood pooling under his chair. Lived to old age in Stone County, AR.</div></div>
+    <div class="ac"><div class="an">Jess Wilson</div><div class="at">"A little man who looked like he wouldn't fight a chicken." Held the horses. Braver than he seemed, the family said.</div></div>
+  </div>
+  <p>The seventeen dead bushwhackers were never investigated either. There was no law for that kind of justice.</p>
+</section>
+
+<section id="suspect">
+  <p class="sl">&sect;&nbsp;08</p>
+  <h2>The Named Suspect</h2>
+  <div class="rule"></div>
+  <p>The family tradition points to one man by name: <strong>Henry Stewart of Yale, Arkansas</strong>. Born December 1840 &mdash; making him twenty-three or twenty-four when Spencer Horner was killed. Confederate soldier. He lived a long life, dying in 1930, sixty-six years after the murder.</p>
+  <p>He is buried at Yale Cemetery &mdash; the same ground where John "Old Jack" Acord lies. The grandfather of the two boys who watched Spencer die is in the same cemetery as the man the family believed killed him.</p>
+  <blockquote>
+    <p>"It is generally believed that one of the Stewarts from Yale participated in these killings, probably Henry Stewart."</p>
+    <cite>&mdash; FamilySearch contributor HeatherAcord, 2013</cite>
+  </blockquote>
+  <div class="hl"><strong>The qualifier matters.</strong> Family tradition, not sworn testimony. But Spencer recognized his killers as neighbors, and Henry Stewart was a neighbor of military age who fought for the Confederacy, came home, and lived out his life in the same community where the Horners buried their dead. He died at ninety. FindAGrave #32180961, Yale Cemetery, Johnson County, Arkansas.</div>
+</section>
+
+<section id="gold">
+  <p class="sl">&sect;&nbsp;09</p>
+  <h2>The Gold That Stayed Hidden</h2>
+  <div class="rule"></div>
+  <p>Spencer Horner had money. Gold and silver and paper, saved over years, hidden somewhere on the farm. After he died, the bushwhackers tore the place apart &mdash; pulled down buildings, knocked fences flat, dug where they thought it might be buried. They never found it. The family never found it either.</p>
+  <p>Years later, one of Spencer's sons dreamed about it: a black gum tree in the middle of a field, a certain number of steps toward the house, digging down and finding the pot of gold. But dreams are not maps, and the money stayed lost.</p>
+  <p>Permelia sold the farm for a horse and wagon and left the place where she had raised her children and buried her husband. She came back to Johnson County after the war and lived until 1892, dying on August ninth &mdash; one day before the twenty-eighth anniversary of her son William's slow death in a cave.</p>
+</section>
+
+<section id="gallery">
+  <p class="sl">&sect;&nbsp;10</p>
+  <h2>Documentary Record</h2>
+  <div class="rule"></div>
+  <div class="notice">To add photographs: upload image files alongside index.html in GitHub, then replace each .gph placeholder with: &lt;img src="filename.jpg" alt="description" style="width:100%;height:155px;object-fit:cover;"&gt;</div>
+  <div class="gal">
+    <div class="gi"><div class="gph">MOORE CEMETERY<br>Photo pending</div><div class="gc">Moore Cemetery &mdash; Spencer, William,<br>and Permelia Horner burial site</div></div>
+    <div class="gi"><div class="gph">WILLIAM RILEY HORNER<br>TOMBSTONE<br>Photo pending</div><div class="gc">"Killed Aug. 10, 1864 by parties<br>known to his family"</div></div>
+    <div class="gi"><div class="gph">CAVE / BLUFF SITE<br>Photo pending</div><div class="gc">The overhang where William hid<br>for eight days before dying</div></div>
+    <div class="gi"><div class="gph">LAND PATENT 19B<br>Document scan pending</div><div class="gc">1857 &mdash; "Co-cha-tubbee" notation<br>Fayetteville Land Office</div></div>
+  </div>
+</section>
+
+<section id="yale">
+  <p class="sl">&sect;&nbsp;11</p>
+  <h2>Yale Cemetery — A Convergence</h2>
+  <div class="rule"></div>
+  <p>Yale Cemetery, near Oark in Johnson County, is where multiple independent threads of this case meet in the same ground.</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Individual</th><th>Role in This Case</th><th>Burial Confirmed</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Marcus Mark Hill</strong></td><td>Hill family patriarch. Grandfather of the Confederate sheriff and the Union soldier.</td><td class="mono">Yes &mdash; FindAGrave, Yale Cemetery</td></tr>
+        <tr><td><strong>Rachel Fry Hill</strong></td><td>Wife of Marcus. Mother of John Fry Hill and Joseph Hill. Died 1843, Yale, Johnson County.</td><td class="mono">Yes &mdash; died Yale, 1843</td></tr>
+        <tr><td><strong>Henry Stewart</strong></td><td>Named suspect in the killings (family tradition).</td><td class="mono">Yes &mdash; FindAGrave #32180961</td></tr>
+        <tr><td><strong>John "Old Jack" Acord</strong></td><td>Grandfather of orphaned witnesses John Samuel and Christopher Columbus Acord.</td><td class="mono">Yes &mdash; Yale Cemetery</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="hl"><strong>May 1864 — Three months before the murders:</strong> General J.O. Shelby's Confederate cavalry crossed the Arkansas River near Clarksville, forcing the Union garrison out. Lt. Col. Waugh's forces then torched much of Clarksville — including the Methodist church — to deny resources. Among the Confederate commanders operating at Clarksville during 1864: <strong>Colonel John Hill</strong> — John Fry Hill, the county sheriff. He was not commanding from a distance. He was in his own county, in his own county seat, while simultaneously holding the office that had jurisdiction over the murders that were about to happen.</div>
+  <div class="hl"><strong>February 1865 — Six months after the murders:</strong> "Union Jayhawkers" raided the nearby Pittsburg community. They tortured local women by holding their legs in hot coals to find hidden money. The story of the hidden gold at the Horner farm — the gold the bushwhackers tore the place apart looking for — fits a documented pattern of systematic extraction by violence running through this corridor throughout the war.</div>
+  <div class="hl"><strong>Yale Cemetery requires field documentation.</strong> GPS coordinates, tombstone photography, and full inscription transcription for all four individuals — plus any adjacent stones that may establish further connections — are a research priority.</div>
+</section>
+
+<section id="sources">
+  <p class="sl">&sect;&nbsp;11</p>
+  <h2>Primary Sources</h2>
+  <div class="rule"></div>
+  <div class="sg">
+    <div class="sc"><div class="stp">Land Records</div><div class="st">Federal Land Patents 4706 &amp; 19B</div><div class="sd">Fayetteville Land Office. Documents 4706 (1848) and 19B (1857). Patent 19B contains the "Co-cha-tubbee" notation. Establishes Horner property in Floyd Township.</div><div class="si pnd">&#x25CF; Scan pending</div></div>
+    <div class="sc"><div class="stp">Court Records</div><div class="st">Estate of Spencer Horner, 1865</div><div class="sd">Johnson County Court Records. Administrator: Dr. John Turner Horner. Expected to name heirs and document property disposition after the murder.</div><div class="si pnd">&#x25CF; Acquisition in progress</div></div>
+    <div class="sc"><div class="stp">Military Records</div><div class="st">Company K, 2nd Arkansas Infantry (US)</div><div class="sd">NARA. Service and death records for Francis Marion Acord and Andrew Jackson Horner. Establishes Union affiliation and cause of death at Lewisburg Ridge.</div><div class="si ok">&#x25CF; Reviewed</div></div>
+    <div class="sc"><div class="stp">Oral History</div><div class="st">1942 Horner Family Transcript</div><div class="sd">Recorded by Eva Horner, 78 years after the events. Names individuals and describes violence in specific detail. FindAGrave #9297073. Single known copy, privately held.</div><div class="si ok">&#x25CF; Held by researcher</div></div>
+    <div class="sc"><div class="stp">Funerary Record</div><div class="st">William Riley Horner Tombstone</div><div class="sd">Moore Cemetery, Johnson County. "Wm. R. Homer Born Aug. 1, 1834 Killed Aug. 10, 1864 by parties known to his family." GPS coordinates verified.</div><div class="si ok">&#x25CF; Photographed &amp; documented</div></div>
+    <div class="sc"><div class="stp">Funerary Record</div><div class="st">Henry Stewart, Yale Cemetery</div><div class="sd">FindAGrave #32180961. b. December 1840, d. 1930. Confederate soldier. Named in family tradition as participant in the killings. Buried in same cemetery as John "Old Jack" Acord.</div><div class="si ok">&#x25CF; Documented</div></div>
+    <div class="sc"><div class="stp">GPS Documentation</div><div class="st">Dewberry Site Survey, 2003</div><div class="sd">Jimmie Dewberry (2003). Three coordinates: Moore Cemetery, Horner house site, cave/bluff. FamilySearch LH23-VP3. Cross-verified against modern topography by researcher.</div><div class="si ok">&#x25CF; Verified</div></div>
+    <div class="sc"><div class="stp">Historical Text</div><div class="st">Goodspeed Barry County, MO History, 1888</div><div class="sd">Biographical entry for John Fry Hill establishing his dual role as Johnson County sheriff and colonel of the 7th Arkansas Cavalry (CSA) during the war.</div><div class="si ok">&#x25CF; Reviewed</div></div>
+    <div class="sc"><div class="stp">Genealogy</div><div class="st">FamilySearch: Horner Family (LH23-VP3)</div><div class="sd">Comprehensive family research file. Includes Elizabeth Horner Acord (KG91-Z66), Dewberry GPS coordinates, and HeatherAcord's 2013 contributor note naming Henry Stewart.</div><div class="si ok">&#x25CF; On file</div></div>
+  </div>
+</section>
+
+<section id="dossier">
+  <p class="sl">&sect;&nbsp;12</p>
+  <h2>Full Research Dossier</h2>
+  <div class="rule"></div>
+  <div class="dlb">
+    <h3>The Killing of John Spencer Horner &mdash; Complete Dossier</h3>
+    <p>Version 10.0 &nbsp;&middot;&nbsp; March 2026 &nbsp;&middot;&nbsp; CMSR records &middot; Company K cluster &middot; Reprisal squad documentation &middot; Land patents &middot; GPS data &middot; 1942 transcript &middot; Full citations</p>
+    <a href="dossier.pdf" class="btn bp" download>Download PDF</a>
+    <a href="/cdn-cgi/l/email-protection#7a1613141d1b081e1b14131f164b3a1d171b131654191517" class="btn bg">Licensing Inquiries</a>
+  </div>
+  <p style="font-size:.85rem;color:var(--muted);font-family:'Courier Prime',monospace;letter-spacing:.04em;line-height:1.7;margin-top:1rem;">&copy; Daniel Lingar. Free for non-commercial research, educational, and genealogical use with attribution. Contact for reproduction rights, exhibition use, or documentary licensing. Working document &mdash; updated as research progresses.</p>
+</section>
+
+</main>
+
+<footer>
+  <p class="ft">The Killing of John Spencer Horner &mdash; Johnson County Civil War Archive</p>
+  <p>Research by Daniel Lingar &nbsp;&middot;&nbsp; Clarksville, Arkansas</p>
+  <p>Floyd Township, Johnson County, Arkansas &nbsp;&middot;&nbsp; August 2, 1864</p><br>
+  <p>Free for non-commercial research use with attribution.</p>
+  <p>Licensing &amp; reproduction rights: <a href="/cdn-cgi/l/email-protection#58343
