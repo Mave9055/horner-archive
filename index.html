@@ -240,12 +240,31 @@ footer a{color:var(--gold);text-decoration:none;}
   <h2>Site Locations</h2>
   <div class="rule"></div>
   <p>GPS coordinates recorded by Jimmie Dewberry, 2003. Preserved in FamilySearch record LH23-VP3. All sites are north of Highway 86 (Low Gap Road), approximately 2.3 miles west of Ozone, Arkansas.</p>
-  <div class="mf">
-    <div class="mph">
-      <span style="font-size:2rem;opacity:.25;">&#x2295;</span>
-      <span>INTERACTIVE MAP<br>Moore Cemetery &nbsp;&middot;&nbsp; Horner Homestead &nbsp;&middot;&nbsp; Cave Refuge<br><br>Paste your Google My Maps embed iframe here</span>
-    </div>
-  </div>
+  <div id="map" style="height: 500px; width: 100%; border: 1px solid var(--rule); margin: 2rem 0;"></div>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var map = L.map('map').setView([35.66, -93.49], 14);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      var sites = [
+        { name: "Moore Cemetery", coords: [35.6666, -93.4955], notes: "Spencer, William, Permelia Horner buried here" },
+        { name: "Spencer Horner House Site", coords: [35.6681, -93.4981], notes: "Attack site; potato patch; Spencer's murder" },
+        { name: "The Bluff / Cave", coords: [35.6583, -93.4888], notes: "William's hiding place; died here Aug. 10, 1864" }
+      ];
+
+      sites.forEach(function(site) {
+        L.marker(site.coords).addTo(map)
+          .bindPopup("<b>" + site.name + "</b><br>" + site.notes);
+      });
+      
+      var group = new L.featureGroup(sites.map(s => L.marker(s.coords)));
+      map.fitBounds(group.getBounds().pad(0.1));
+    });
+  </script>
   <p class="mc">Floyd Township, Johnson County, Arkansas &mdash; GPS-verified sites &mdash; Jimmie Dewberry (2003) &mdash; FamilySearch LH23-VP3</p>
   <div class="tw" style="margin-top:1.8rem;">
     <table>
